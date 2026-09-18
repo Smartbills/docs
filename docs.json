@@ -765,6 +765,10 @@
   },
   "redirects": [
     {
+      "source": "/",
+      "destination": "/introduction"
+    },
+    {
       "source": "/guides/web-app/wallet/overview",
       "destination": "/guides/web-app/expenses/overview"
     },
