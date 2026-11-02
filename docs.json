@@ -44,7 +44,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@smartbills.io"
+        "href": "mailto:support@smartbills.ca"
       }
     ],
     "primary": {
@@ -320,6 +320,12 @@
                 "group": "Automation",
                 "pages": [
                   "integrations/zapier"
+                ]
+              },
+              {
+                "group": "AI Assistants",
+                "pages": [
+                  "integrations/claude"
                 ]
               }
             ]
@@ -636,6 +642,12 @@
                 "group": "Automatisation",
                 "pages": [
                   "fr/integrations/zapier"
+                ]
+              },
+              {
+                "group": "Assistants IA",
+                "pages": [
+                  "fr/integrations/claude"
                 ]
               }
             ]

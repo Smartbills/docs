@@ -1,0 +1,80 @@
+---
+title: "Claude connector"
+sidebarTitle: "Claude"
+description: "Connect Smartbills to Claude to ask about spend, turn receipts into expenses, file and approve expense reports, and manage bills and invoices by chat."
+---
+
+## Overview
+
+The Smartbills connector lets Claude work in your Smartbills business with your own permissions. Ask about spend, turn receipts into expenses, file and approve expense reports, and create and track bills and invoices — in Claude on the web, desktop, mobile and Claude Code.
+
+Results for receipts, expenses, expense reports, bills, invoices, spend and budgets appear as interactive cards in the conversation.
+
+## Key Features
+
+| Feature | Description |
+|---------|-------------|
+| **Spend analysis** | Spend by category, vendor, person, department or period, and budget vs. actual |
+| **Receipt capture** | Upload a receipt and get a categorised expense |
+| **Expense reports** | Gather expenses into a report, run the policy check and submit it |
+| **Approvals** | Review reports and bills waiting for you, then approve or reject |
+| **Payables and receivables** | Create bills and invoices, resolve purchase-order matches, record payments made outside Smartbills |
+| **Month-end close** | See what still blocks the month and fix what you approve |
+
+## Prerequisites
+
+- A Smartbills account that belongs to at least one business
+- A Claude plan that supports connectors
+
+## Setup
+
+<Steps>
+  <Step title="Add the connector">
+    In Claude, open **Customize > Connectors**, find **Smartbills** in the directory and click **Connect**.
+
+    Not listed yet for you? Choose **Add custom connector** and enter `https://mcp.smartbills.io/mcp`. Leave the advanced settings empty.
+  </Step>
+  <Step title="Sign in">
+    Sign in with your Smartbills account.
+  </Step>
+  <Step title="Choose a business and permissions">
+    Pick the business Claude should work in and review the permissions requested. To use another business later, ask Claude to switch, or disconnect and reconnect.
+  </Step>
+  <Step title="Try it">
+    Ask *"How much did we spend on software last quarter?"* or *"What's waiting for my approval?"*
+  </Step>
+</Steps>
+
+On **Team** and **Enterprise** plans, an owner enables the connector for the organization first; each member then connects with their own Smartbills account.
+
+For **Claude Code**:
+
+```bash
+claude mcp add --transport http smartbills https://mcp.smartbills.io/mcp
+```
+
+## Permissions and safety
+
+- Claude sees only the tools your role and the permissions you granted allow. It can never do more than you can in Smartbills.
+- Read tools run freely. Changes are marked as writes, and deleting, rejecting and other irreversible actions always ask you to confirm.
+- The connector never moves money. It records payments made outside Smartbills, but does not send, refund or schedule payments.
+- Every change Claude makes is recorded in your business's audit log with the connected app's name.
+- Tool calls are billed to your Claude plan, not to your Smartbills AI credits. Rate limits apply per business.
+
+## Disconnect
+
+In Claude, open **Customize > Connectors > Smartbills** and click **Disconnect**. Claude stops using your Smartbills account immediately.
+
+If you can no longer reach Claude to disconnect, contact [support@smartbills.ca](mailto:support@smartbills.ca) and we will revoke the connection from our side.
+
+## Troubleshooting
+
+| Problem | Fix |
+|---------|-----|
+| Fewer tools than expected | Your role or the permissions you granted limit them. Disconnect, reconnect and allow the permissions you need. |
+| "Not permitted" on a tool | Your role in this business cannot do that action in Smartbills either. |
+| Working in the wrong business | Ask Claude to use the other business, or reconnect and choose it. |
+
+## Data and privacy
+
+Smartbills processes the data Claude requests under the [Smartbills Privacy Policy](https://smartbills.io/en/legal/privacy-policy). Questions: [support@smartbills.ca](mailto:support@smartbills.ca).

@@ -1,0 +1,80 @@
+---
+title: "Connecteur Claude"
+sidebarTitle: "Claude"
+description: "Utilisez Smartbills depuis Claude : analysez vos dépenses, soumettez et approuvez des rapports de dépenses, et gérez vos factures en conversation."
+---
+
+## Aperçu
+
+Le connecteur Smartbills permet à Claude de travailler dans votre entreprise Smartbills, avec vos propres autorisations. Posez des questions sur vos dépenses, transformez des reçus en dépenses, soumettez et approuvez des rapports de dépenses, et créez et suivez des factures fournisseurs et des factures clients — dans Claude sur le web, l'application de bureau, le mobile et Claude Code.
+
+Les reçus, dépenses, rapports de dépenses, factures, dépenses par catégorie et budgets s'affichent sous forme de cartes interactives dans la conversation.
+
+## Fonctionnalités clés
+
+| Fonctionnalité | Description |
+|---------|-------------|
+| **Analyse des dépenses** | Dépenses par catégorie, fournisseur, personne, département ou période, et budget par rapport au réel |
+| **Capture de reçus** | Téléversez un reçu et obtenez une dépense catégorisée |
+| **Rapports de dépenses** | Regroupez des dépenses dans un rapport, vérifiez-le selon la politique et soumettez-le |
+| **Approbations** | Examinez les rapports et factures qui attendent votre décision, puis approuvez ou refusez |
+| **Comptes fournisseurs et clients** | Créez des factures fournisseurs et clients, résolvez les rapprochements avec les bons de commande, enregistrez les paiements faits hors de Smartbills |
+| **Fermeture de mois** | Voyez ce qui bloque encore la fermeture du mois et corrigez ce que vous approuvez |
+
+## Prérequis
+
+- Un compte Smartbills membre d'au moins une entreprise
+- Un forfait Claude qui prend en charge les connecteurs
+
+## Configuration
+
+<Steps>
+  <Step title="Ajouter le connecteur">
+    Dans Claude, ouvrez **Personnalisation > Connecteurs**, trouvez **Smartbills** dans l'annuaire et cliquez sur **Connecter**.
+
+    Il n'apparaît pas encore pour vous ? Choisissez **Ajouter un connecteur personnalisé** et entrez `https://mcp.smartbills.io/mcp`. Laissez les paramètres avancés vides.
+  </Step>
+  <Step title="Se connecter">
+    Connectez-vous avec votre compte Smartbills.
+  </Step>
+  <Step title="Choisir une entreprise et les autorisations">
+    Choisissez l'entreprise dans laquelle Claude doit travailler et vérifiez les autorisations demandées. Pour utiliser une autre entreprise plus tard, demandez à Claude de changer, ou déconnectez-vous puis reconnectez-vous.
+  </Step>
+  <Step title="L'essayer">
+    Demandez *« Combien avons-nous dépensé en logiciels le trimestre dernier ? »* ou *« Qu'est-ce qui attend mon approbation ? »*
+  </Step>
+</Steps>
+
+Sur les forfaits **Team** et **Enterprise**, un propriétaire active d'abord le connecteur pour l'organisation; chaque membre se connecte ensuite avec son propre compte Smartbills.
+
+Pour **Claude Code** :
+
+```bash
+claude mcp add --transport http smartbills https://mcp.smartbills.io/mcp
+```
+
+## Autorisations et sécurité
+
+- Claude ne voit que les outils permis par votre rôle et les autorisations que vous avez accordées. Il ne peut jamais faire plus que vous dans Smartbills.
+- Les outils de lecture s'exécutent librement. Les modifications sont identifiées comme des écritures, et les suppressions, refus et autres actions irréversibles vous demandent toujours de confirmer.
+- Le connecteur ne déplace jamais d'argent. Il enregistre les paiements faits hors de Smartbills, mais n'envoie, ne rembourse et ne planifie aucun paiement.
+- Chaque modification faite par Claude est inscrite au journal d'audit de votre entreprise avec le nom de l'application connectée.
+- Les appels d'outils sont facturés à votre forfait Claude, pas à vos crédits IA Smartbills. Des limites de débit s'appliquent par entreprise.
+
+## Déconnexion
+
+Dans Claude, ouvrez **Personnalisation > Connecteurs > Smartbills** et cliquez sur **Déconnecter**. Claude cesse aussitôt d'utiliser votre compte Smartbills.
+
+Si vous n'avez plus accès à Claude pour vous déconnecter, écrivez à [support@smartbills.ca](mailto:support@smartbills.ca) et nous révoquerons la connexion de notre côté.
+
+## Dépannage
+
+| Problème | Solution |
+|---------|-----|
+| Moins d'outils que prévu | Votre rôle ou les autorisations accordées les limitent. Déconnectez-vous, reconnectez-vous et accordez les autorisations nécessaires. |
+| « Non autorisé » sur un outil | Votre rôle dans cette entreprise ne permet pas non plus cette action dans Smartbills. |
+| Claude travaille dans la mauvaise entreprise | Demandez à Claude d'utiliser l'autre entreprise, ou reconnectez-vous et choisissez-la. |
+
+## Données et confidentialité
+
+Smartbills traite les données demandées par Claude conformément à la [Politique de confidentialité de Smartbills](https://smartbills.io/fr/legal/privacy-policy). Questions : [support@smartbills.ca](mailto:support@smartbills.ca).
