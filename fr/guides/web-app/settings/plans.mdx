@@ -1,0 +1,79 @@
+---
+title: "Forfaits et tarifs"
+description: "Les forfaits Smartbills, leur prix et ce qu'ils incluent, les fonctionnalités qui exigent un forfait payant, et le fonctionnement des forfaits Entreprise et des anciens forfaits."
+---
+
+import { catalog } from "/snippets/plans.mdx";
+
+## Forfaits
+
+| Forfait | Prix | Idéal pour |
+|---------|------|------------|
+| **Gratuit** | 0 {catalog.currency} | Une personne qui essaie la saisie des reçus |
+| **Professionnel** | {catalog.professionalPrice.replace(".", ",")} {catalog.currency} par utilisateur par mois | Les équipes qui soumettent, approuvent et exportent leurs dépenses |
+| **Entreprise** | Contactez les ventes | Les organisations qui ont besoin d'un contrat, de modalités de paiement sur facture, du SSO ou de limites sur mesure |
+| **Portfolio** | Contactez les ventes | Les gestionnaires immobiliers : les limites du forfait Professionnel, plus jusqu'à {catalog.portfolioPortalLogins} identifiants de portails fournisseurs |
+
+Les forfaits Gratuit et Professionnel se choisissent dans l'application, sous **Paramètres > Facturation > Forfaits**. Les forfaits Entreprise et Portfolio sont mis en place par l'équipe des ventes de Smartbills : écrivez à [sales@smartbills.io](mailto:sales@smartbills.io).
+
+<Note>
+  Le forfait Professionnel comprend un **essai gratuit de {catalog.trialDays} jours**, qui commence lorsque vous le choisissez. Le forfait Gratuit ne demande aucune carte de crédit.
+</Note>
+
+L'application affiche les prix dans la devise de facturation de votre entreprise.
+
+## Ce que comprend chaque forfait
+
+| | Gratuit | Professionnel | Entreprise |
+|---|---|---|---|
+| Numérisations de reçus | {catalog.limits.free.receiptsPerMonth} par mois (au plus {catalog.limits.free.receiptsPerDay} par jour) | Illimitées | Illimitées |
+| Dépenses saisies manuellement | {catalog.limits.free.manualEntriesPerMonth} par mois | Illimitées | Illimitées |
+| Reçus numériques des marchands | Illimités | Illimités | Illimités |
+| Rapports de dépenses | {catalog.limits.free.expenseReportsPerMonth} par mois | Illimités | Illimités |
+| Membres de l'équipe | Vous seulement | Jusqu'à {catalog.limits.professional.invites} membres invités | Illimités |
+| Connexions bancaires | Aucune | {catalog.limits.professional.bankConnectionsIncluded}, plus 1 par utilisateur | Illimitées |
+| Boîtes courriel connectées | Aucune | {catalog.limits.professional.mailboxes} | Illimitées |
+| Stockage | {catalog.limits.free.storageMb} Mo | {catalog.limits.professional.storageGbPerUser} Go par utilisateur | Illimité |
+| Catégories et départements | {catalog.limits.free.categories} catégories, {catalog.limits.free.departments} département | Illimités | Illimités |
+| Dossiers du coffre | {catalog.limits.free.folders} | {catalog.limits.professional.folders.replace(",", " ")} | Illimités |
+| Crédits IA | {catalog.limits.free.aiCreditsPerMonth} par mois | {catalog.limits.professional.aiCreditsPerUserPerMonth} par utilisateur par mois | {catalog.limits.enterprise.aiCreditsPerUserPerMonth.replace(",", " ")} par utilisateur par mois |
+| Journal d'audit et délégation | Non | Oui | Oui |
+| Intégrations | Non | Oui | Oui |
+
+Les allocations par utilisateur sont mises en commun : une entreprise de cinq utilisateurs au forfait Professionnel partage 5 Go de stockage et 5 × {catalog.limits.professional.aiCreditsPerUserPerMonth} crédits IA par mois. La facturation des clients (comptes clients) et les outils d'affectation des paiements sont des modules complémentaires qui s'ajoutent à un forfait.
+
+Lorsqu'une limite est atteinte, l'action qui en dépend est refusée jusqu'à la réinitialisation de la période ou jusqu'au changement de forfait. **Paramètres > Facturation** affiche votre utilisation pour chaque limite.
+
+## Fonctionnalités qui exigent un forfait payant
+
+Les fonctionnalités liées au forfait exigent le forfait **Professionnel ou supérieur**. Cela comprend le [journal d'audit](/fr/guides/web-app/settings/audit-log), la [délégation](/fr/guides/web-app/settings/delegation) et les [intégrations](/fr/integrations/overview) (comptabilité, banques, stockage et messagerie). Lorsqu'une page indique « Professionnel ou supérieur », tout forfait payant de la liste ci-dessus convient.
+
+## Contrats Entreprise
+
+Une entreprise au forfait Entreprise est facturée selon un contrat plutôt que par carte :
+
+- Une durée fixe, renouvelée automatiquement à moins d'un préavis donné avant la date prévue au contrat
+- Le paiement par carte, ou sur facture avec des modalités de paiement et un numéro de bon de commande facultatif
+- Des sièges engagés, des changements de prix ou de sièges planifiés, et des frais uniques de mise en place ou d'intégration
+- Le SSO, des limites sur mesure et un gestionnaire de compte attitré
+
+Les modifications d'un contrat passent par votre gestionnaire de compte.
+
+## Anciens forfaits
+
+Les forfaits Startup, Business et Scale ne sont plus offerts. Une entreprise qui en a un le conserve, avec ses limites, jusqu'à ce qu'elle change de forfait; une fois le changement fait, elle ne peut plus y revenir.
+
+<Note>
+  L'application peut encore afficher le forfait Professionnel sous le nom **Business**. Il s'agit du même forfait.
+</Note>
+
+## Voir aussi
+
+<CardGroup cols={2}>
+  <Card title="Facturation" icon="credit-card" href="/fr/guides/web-app/settings/billing">
+    Changer de forfait, mettre à jour le mode de paiement et consulter les factures
+  </Card>
+  <Card title="Rôles et permissions" icon="shield" href="/fr/guides/concepts/roles-and-permissions">
+    Qui peut gérer la facturation
+  </Card>
+</CardGroup>

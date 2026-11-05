@@ -1,0 +1,79 @@
+---
+title: "Plans and pricing"
+description: "The Smartbills plans, what each one costs and includes, which features need a paid plan, and how Enterprise and legacy plans work."
+---
+
+import { catalog } from "/snippets/plans.mdx";
+
+## Plans
+
+| Plan | Price | Best for |
+|------|-------|----------|
+| **Free** | {catalog.currency} 0 | One person trying receipt capture |
+| **Professional** | {catalog.currency} {catalog.professionalPrice} per user per month | Teams that submit, approve and export expenses |
+| **Enterprise** | Contact sales | Larger organizations that need a contract, invoiced payment terms, SSO or custom limits |
+| **Portfolio** | Contact sales | Property managers: Professional's limits plus up to {catalog.portfolioPortalLogins} vendor portal logins |
+
+Free and Professional can be chosen in the app under **Settings > Billing > Plans**. Enterprise and Portfolio are set up by the Smartbills sales team: contact [sales@smartbills.io](mailto:sales@smartbills.io).
+
+<Note>
+  Professional comes with a **{catalog.trialDays}-day free trial**, which starts when you choose it. The Free plan needs no credit card.
+</Note>
+
+The app shows prices in your workspace's billing currency.
+
+## What each plan includes
+
+| | Free | Professional | Enterprise |
+|---|---|---|---|
+| Receipt scans | {catalog.limits.free.receiptsPerMonth} a month (at most {catalog.limits.free.receiptsPerDay} a day) | Unlimited | Unlimited |
+| Manual expenses | {catalog.limits.free.manualEntriesPerMonth} a month | Unlimited | Unlimited |
+| Digital receipts from merchants | Unlimited | Unlimited | Unlimited |
+| Expense reports | {catalog.limits.free.expenseReportsPerMonth} a month | Unlimited | Unlimited |
+| Team members | Just you | Up to {catalog.limits.professional.invites} invited members | Unlimited |
+| Bank connections | None | {catalog.limits.professional.bankConnectionsIncluded}, plus 1 per user | Unlimited |
+| Connected mailboxes | None | {catalog.limits.professional.mailboxes} | Unlimited |
+| Storage | {catalog.limits.free.storageMb} MB | {catalog.limits.professional.storageGbPerUser} GB per user | Unlimited |
+| Categories and departments | {catalog.limits.free.categories} categories, {catalog.limits.free.departments} department | Unlimited | Unlimited |
+| Vault folders | {catalog.limits.free.folders} | {catalog.limits.professional.folders} | Unlimited |
+| AI credits | {catalog.limits.free.aiCreditsPerMonth} a month | {catalog.limits.professional.aiCreditsPerUserPerMonth} per user per month | {catalog.limits.enterprise.aiCreditsPerUserPerMonth} per user per month |
+| Audit log and delegation | No | Yes | Yes |
+| Integrations | No | Yes | Yes |
+
+Per-user allowances are pooled: a workspace with five users on Professional shares 5 GB of storage and 5 × {catalog.limits.professional.aiCreditsPerUserPerMonth} AI credits a month. Customer invoicing (accounts receivable) and the cash-application tools are add-ons on top of a plan.
+
+When a limit is reached, the action that needs it is refused until the period resets or the plan changes. **Settings > Billing** shows your usage against each limit.
+
+## Features that need a paid plan
+
+Features gated by plan need **Professional or higher**. That covers the [audit log](/guides/web-app/settings/audit-log), [delegation](/guides/web-app/settings/delegation) and the [integrations](/integrations/overview) (accounting, banking, storage and messaging apps). Where a page says a feature needs "Professional or higher", any paid plan listed above qualifies.
+
+## Enterprise contracts
+
+An Enterprise workspace is billed under a contract rather than by card:
+
+- A fixed term, renewed automatically unless you give notice by the date in the contract
+- Payment by card, or by invoice with payment terms and an optional purchase order number
+- Committed seats, scheduled price or seat changes, and one-time set-up or integration fees
+- SSO, custom limits and a dedicated account manager
+
+Changes to a contract go through your account manager.
+
+## Legacy plans
+
+Startup, Business and Scale are no longer sold. A workspace on one of them keeps its plan and limits until it changes plan; once it moves, it cannot go back.
+
+<Note>
+  The app may still label Professional as **Business**. They are the same plan.
+</Note>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Billing" icon="credit-card" href="/guides/web-app/settings/billing">
+    Change plan, update the payment method and see invoices
+  </Card>
+  <Card title="Roles and permissions" icon="shield" href="/guides/concepts/roles-and-permissions">
+    Who can manage billing
+  </Card>
+</CardGroup>

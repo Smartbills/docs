@@ -3,6 +3,8 @@ title: "Frequently Asked Questions"
 description: "Common questions about Smartbills"
 ---
 
+import { catalog } from "/snippets/plans.mdx";
+
 ## Getting Started
 
 <AccordionGroup>
@@ -16,7 +18,7 @@ description: "Common questions about Smartbills"
   </Accordion>
   
   <Accordion title="Is there a free trial?">
-    Yes! Smartbills offers a 14-day free trial with full access to all features. No credit card required to start.
+    Yes. The Professional plan comes with a {catalog.trialDays}-day free trial, which starts when you choose it. The Free plan needs no credit card. See [Plans and pricing](/guides/web-app/settings/plans).
   </Accordion>
   
   <Accordion title="What devices can I use Smartbills on?">
@@ -196,12 +198,13 @@ description: "Common questions about Smartbills"
   <Accordion title="What plans are available?">
     | Plan | Price | Best For |
     |------|-------|----------|
-    | Free | $0/month | Individuals, small teams |
-    | Professional | $12/user/month | Growing teams |
-    | Business | $25/user/month | Companies |
-    | Enterprise | Custom | Large organizations |
+    | Free | {catalog.currency} 0 | One person trying receipt capture |
+    | Professional | {catalog.currency} {catalog.professionalPrice}/user/month | Teams |
+    | Enterprise | Contact sales | Larger organizations that need a contract |
+    | Portfolio | Contact sales | Property managers |
     
-    Visit [smartbills.io/pricing](https://smartbills.io/pricing) for full details.
+    See [Plans and pricing](/guides/web-app/settings/plans) for what each plan includes. Startup, Business and Scale are no longer sold;
+    workspaces on them keep their plan.
   </Accordion>
   
   <Accordion title="Can I change my plan?">
@@ -218,8 +221,7 @@ description: "Common questions about Smartbills"
     We accept:
     - Credit cards (Visa, Mastercard, Amex)
     - Debit cards
-    - ACH bank transfer (Business & Enterprise)
-    - Wire transfer (Enterprise only)
+    - Payment by invoice and bank transfer (Enterprise contracts)
   </Accordion>
   
   <Accordion title="Do you offer refunds?">

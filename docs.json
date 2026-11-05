@@ -196,6 +196,7 @@
                   "guides/web-app/settings/departments",
                   "guides/web-app/settings/email-accounts",
                   "guides/web-app/settings/billing",
+                  "guides/web-app/settings/plans",
                   "guides/web-app/settings/branding",
                   "guides/web-app/settings/delegation",
                   "guides/web-app/settings/audit-log"
@@ -521,6 +522,7 @@
                   "fr/guides/web-app/settings/departments",
                   "fr/guides/web-app/settings/email-accounts",
                   "fr/guides/web-app/settings/billing",
+                  "fr/guides/web-app/settings/plans",
                   "fr/guides/web-app/settings/branding",
                   "fr/guides/web-app/settings/delegation",
                   "fr/guides/web-app/settings/audit-log"

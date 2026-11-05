@@ -1,0 +1,44 @@
+{/*
+  The plan catalog, in one place. Every page that states a plan's price, trial or
+  limits imports it from here, so a catalog change is one edit.
+
+  Source of truth (keep in step when they change):
+  - Plans, prices and trial: GET /v1/billing/plans (the public catalog). Today it lists
+    Free and Professional; Enterprise and Portfolio are sales-led and never listed there.
+  - Limits: the platform's QuotaPlanDefaults table, also served per workspace by
+    GET /v1/businesses/{id}/plan-access.
+  - Plan-gated features: plan-access `features[].requiredTier`. Its "business" tier is the
+    Professional plan.
+  Mintlify cannot call the API at build time, so the values are copied here.
+*/}
+
+export const catalog = {
+  currency: "CAD",
+  professionalPrice: "12.99",
+  trialDays: 14,
+  portfolioPortalLogins: 200,
+  limits: {
+    free: {
+      receiptsPerMonth: 10,
+      receiptsPerDay: 5,
+      manualEntriesPerMonth: 10,
+      expenseReportsPerMonth: 1,
+      storageMb: 250,
+      categories: 5,
+      departments: 1,
+      folders: 20,
+      aiCreditsPerMonth: 50,
+    },
+    professional: {
+      invites: 50,
+      bankConnectionsIncluded: 2,
+      mailboxes: 1,
+      storageGbPerUser: 1,
+      folders: "1,000",
+      aiCreditsPerUserPerMonth: 750,
+    },
+    enterprise: {
+      aiCreditsPerUserPerMonth: "3,000",
+    },
+  },
+};
