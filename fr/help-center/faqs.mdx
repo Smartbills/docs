@@ -3,6 +3,8 @@ title: "Questions Fréquentes"
 description: "Réponses aux questions fréquentes sur Smartbills : général, dépenses, rapports de dépenses, équipe et permissions, intégrations et facturation."
 ---
 
+import { catalog } from "/snippets/plans.mdx";
+
 ## Aperçu
 
 Trouvez les réponses aux questions les plus frequemment posées sur Smartbills. Si vous ne trouvez pas ce que vous cherchez, contactez notre équipe de support ou parcourez le [Centre d'aide](/fr/help-center/overview) complet.
@@ -15,14 +17,14 @@ Trouvez les réponses aux questions les plus frequemment posées sur Smartbills.
   </Accordion>
 
   <Accordion title="Combien coûte Smartbills?">
-    Smartbills offre plusieurs forfaits :
+    Smartbills offre ces forfaits :
 
-    - **Gratuit** : pour les particuliers qui suivent leurs dépenses personnelles. Inclut la numérisation de reçus de base et le suivi des dépenses.
-    - **Professionnel** ($12/utilisateur/mois) : pour les professionnels et les petites équipes. Inclut l'OCR avance, les téléversements illimites, les rapports de dépenses et le support prioritaire.
-    - **Business** ($25/utilisateur/mois) : pour les organisations en croissance. Inclut la gestion d'équipe, les flux d'approbation, les intégrations et le support dédié.
-    - **Entreprise** (tarification personnalisée) : pour les grandes organisations avec des exigences spécifiques. Inclut le SSO, la sécurité avancée, les intégrations personnalisées et un gestionnaire de compte dédié.
+    - **Gratuit** : pour une personne qui essaie la saisie des reçus. Aucune carte de crédit requise.
+    - **Professionnel** ({catalog.professionalPrice.replace(".", ",")} {catalog.currency} par utilisateur par mois, avec un essai gratuit de {catalog.trialDays} jours) : pour les équipes. Inclut les numérisations de reçus illimitées, les rapports de dépenses et les approbations, les intégrations, le journal d'audit et la délégation.
+    - **Entreprise** (contactez les ventes) : pour les organisations qui ont besoin d'un contrat, de modalités de paiement sur facture, du SSO, de limites sur mesure et d'un gestionnaire de compte attitré.
+    - **Portfolio** (contactez les ventes) : pour les gestionnaires immobiliers, avec jusqu'à {catalog.portfolioPortalLogins} identifiants de portails fournisseurs.
 
-    Visitez [smartbills.io/pricing](https://smartbills.io/pricing) pour les détails de tarification actuels et la comparaison des forfaits.
+    Consultez [Forfaits et tarifs](/fr/guides/web-app/settings/plans) pour les limites de chaque forfait.
   </Accordion>
 
   <Accordion title="Mes données sont-elles securisees?">
@@ -283,7 +285,7 @@ Trouvez les réponses aux questions les plus frequemment posées sur Smartbills.
 
     - **Cartes de crédit** : Visa, Mastercard, American Express
     - **Cartes de débit** : Visa Débit, Mastercard Débit
-    - **Virement bancaire / prelevement** : disponible pour les forfaits annuels Business et Entreprise
+    - **Facture et virement bancaire** : disponible avec les contrats Entreprise
 
     Tous les paiements sont traités de manière sécurisée via Stripe. Smartbills ne stocke pas les détails complets de votre carte.
 
@@ -321,7 +323,7 @@ Si vous n'avez pas trouve la réponse à votre question, nous sommes la pour vou
 
     Délais de réponse :
     - Gratuit : 48 heures
-    - Pro : 24 heures
+    - Professionnel : 24 heures
     - Entreprise : 4 heures
   </Card>
 
@@ -329,7 +331,7 @@ Si vous n'avez pas trouve la réponse à votre question, nous sommes la pour vou
     Disponible dans l'application (coin inférieur droit)
 
     Heures :
-    - Pro : heures ouvrables
+    - Professionnel : heures ouvrables
     - Entreprise : 24/7
   </Card>
 

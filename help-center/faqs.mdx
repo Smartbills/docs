@@ -3,6 +3,8 @@ title: "Frequently Asked Questions"
 description: "Answers to common Smartbills questions about expenses, expense reports, team permissions, integrations, billing plans and data security on web and mobile."
 ---
 
+import { catalog } from "/snippets/plans.mdx";
+
 ## Overview
 
 Find answers to the most frequently asked questions about Smartbills. If you cannot find what you are looking for, contact our support team or browse the full [Help Center](/help-center/overview).
@@ -15,14 +17,14 @@ Find answers to the most frequently asked questions about Smartbills. If you can
   </Accordion>
 
   <Accordion title="How much does Smartbills cost?">
-    Smartbills offers several plans:
+    Smartbills offers these plans:
 
-    - **Free**: For individuals tracking personal expenses. Includes basic receipt scanning and expense tracking.
-    - **Pro**: For professionals and small teams. Includes advanced OCR, unlimited uploads, expense reports, and priority support.
-    - **Business**: For growing organizations. Includes team management, approval workflows, integrations, and dedicated support.
-    - **Enterprise**: For large organizations with custom requirements. Includes SSO, advanced security, custom integrations, and a dedicated account manager.
+    - **Free**: For one person trying receipt capture. No credit card needed.
+    - **Professional** ({catalog.currency} {catalog.professionalPrice} per user per month, with a {catalog.trialDays}-day free trial): For teams. Includes unlimited receipt scans, expense reports and approvals, integrations, the audit log and delegation.
+    - **Enterprise** (contact sales): For larger organizations that need a contract, invoiced payment terms, SSO, custom limits and a dedicated account manager.
+    - **Portfolio** (contact sales): For property managers, with up to {catalog.portfolioPortalLogins} vendor portal logins.
 
-    Visit [smartbills.io/pricing](https://smartbills.io/pricing) for current pricing details and to compare plans.
+    See [Plans and pricing](/guides/web-app/settings/plans) for each plan's limits.
   </Accordion>
 
   <Accordion title="Is my data secure?">
@@ -282,7 +284,7 @@ Find answers to the most frequently asked questions about Smartbills. If you can
 
     - **Credit cards**: Visa, Mastercard, American Express
     - **Debit cards**: Visa Debit, Mastercard Debit
-    - **Bank transfer / ACH**: Available for annual Business and Enterprise plans
+    - **Invoice and bank transfer**: Available on Enterprise contracts
 
     All payments are processed securely through Stripe. Smartbills does not store your full card details.
 
@@ -319,7 +321,7 @@ If you could not find the answer to your question, we are here to help:
 
     Response times:
     - Free: 48 hours
-    - Pro: 24 hours
+    - Professional: 24 hours
     - Enterprise: 4 hours
   </Card>
 
@@ -327,7 +329,7 @@ If you could not find the answer to your question, we are here to help:
     Available in the app (bottom right corner)
 
     Hours:
-    - Pro: Business hours
+    - Professional: Business hours
     - Enterprise: 24/7
   </Card>
 
